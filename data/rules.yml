@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+
+- rule: Fallback Rule for "Low NLU Confidence".
+  steps:
+  - intent: nlu_fallback
+  - action: utter_request_rephrase
+
+
+- rule: Bot Challange
+  steps:
+  - intent: bot_challange
+  - action: utter_bot_challange
+
+
+- rule: Activate Leave Balance Form and Ignore Other Intents
+  condition:
+  - active_loop: leave_balance
+  steps:
+  - intent: leave_balance
+  - action: leave_balance
+  - active_loop: leave_balance
+  - slot_was_set:
+    - password: null
+    - user_id: null
+
+
+- rule: Submit Leave Balance Form When Both Slots are Filled
+  condition:
+  - active_loop: leave_balance
+  steps:
+  - action: leave_balance
+  - active_loop: null
+  - slot_was_set:
+    - user_id: true
+    - password: true

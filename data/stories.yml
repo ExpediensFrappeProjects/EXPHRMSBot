@@ -1,0 +1,76 @@
+version: "3.1"
+
+stories:
+
+- story: Bot Start or Restart Conversation
+  steps:
+  - intent: bot_start_conversation
+  - action: utter_bot_start_conversation
+  - intent: bot_restart_conversation
+  - action: action_restart_conversation
+
+
+- story: Main Menu
+  steps: 
+  - intent: main_menu
+  - action: utter_main_menu
+
+
+- story: Exit Conversation
+  steps:
+  - intent: exit_conversation
+  - action: action_exit_conversation
+
+
+- story: Greet and Goodbye
+  steps: 
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: action_exit_conversation
+
+
+- story: About Company 
+  steps: 
+  - intent: about_expediens
+  - action: utter_about_expediens
+
+
+- story: Company Policy
+  steps:
+  - intent: company_policy
+  - action: utter_company_policy
+
+
+- story: Holiday List
+  steps:
+  - intent: holiday_list
+  - action: utter_holiday_list
+
+
+- story: Leave
+  steps:
+  - intent: leave
+  - action: utter_leave
+
+
+- story: Leave Types
+  steps:
+  - intent: leave_type
+  - action: utter_leave_type
+
+
+- story: Apply Leave
+  steps:
+  - intent: apply_leave
+  - action: utter_apply_leave
+
+
+- story: Leave Balance
+  steps:
+  - intent: leave_balance
+  - action: action_check_existing_credential
+  - intent: provide_user_id
+  - action: utter_provide_password
+  - intent: provide_password
+  - action: action_leave_balance

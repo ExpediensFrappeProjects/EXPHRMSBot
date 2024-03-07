@@ -1,0 +1,209 @@
+version: "3.1"
+
+intents:
+  - bot_start_conversation
+  - bot_restart_conversation
+  - main_menu
+  - exit_conversation
+  - greet
+  - goodbye
+  - bot_challange
+  - about_expediens
+  - company_policy
+  - holiday_list
+  - leave
+  - leave_type
+  - apply_leave
+  - leave_balance
+  - provide_user_id
+  - provide_password
+
+
+
+entities:
+  - user_id
+  - password
+
+
+
+actions:
+  - action_restart_conversation
+  - action_exit_conversation
+  - action_check_existing_credential
+  - action_leave_balance
+  - action_leave_balance_try_again
+
+
+
+slots:
+  user_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: user_id
+
+  password:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: password
+
+
+
+forms:
+  leave_balance:
+    required_slots:
+      - user_id
+      - password
+
+
+
+responses:
+
+  utter_bot_start_conversation:
+    - text: "Greetings and Welcome to Expediens eSolutions Ltd! I am your Virtual Assistant, prepared to assist you. To get started, kindly select an option from the menu below."
+      buttons:
+        - title: "About Expedien"
+          payload: 'about_expediens'
+        - title: "Company Policy"
+          payload: 'company_policy'
+        - title: "Leave"
+          payload: 'leave'
+        - title: "Holiday List"
+          payload: 'holiday_list'
+
+
+  utter_request_rephrase:
+    - text: "I'm sorry, I didn't quite understand that. However, I'm here to assist you with something similar to:"
+      buttons:
+        - title: "About Expedien"
+          payload: 'about_expediens'
+        - title: "Company Policy"
+          payload: 'company_policy'
+        - title: "Leave"
+          payload: 'leave'
+        - title: "Holiday List"
+          payload: 'holiday_list'
+
+
+  utter_greet:
+    - text: "Hello! Nice to have you here. What can I do for you right now?"
+      buttons:
+        - title: "About Expedien"
+          payload: 'about_expediens'
+        - title: "Company Policy"
+          payload: 'company_policy'
+        - title: "Leave"
+          payload: 'leave'
+        - title: "Holiday List"
+          payload: 'holiday_list'
+
+
+
+  utter_bot_challange:
+    - text: "I am Expediens Virtual Assistant. In what manner may I be of service to you?"
+      buttons:
+        - title: "About Expedien"
+          payload: 'about_expediens'
+        - title: "Company Policy"
+          payload: 'company_policy'
+        - title: "Leave"
+          payload: 'leave'
+        - title: "Holiday List"
+          payload: 'holiday_list'
+
+  utter_about_expediens:
+    - text: "**Expedien eSolutions**, founded in 2003, is a global IT provider in Noida, India, specializing in custom solutions and e-Governance optimization for businesses. Our expertise, particularly in Higher Education, focuses on innovation and maximizing ROI through state-of-the-art IT solutions. For more details [Click Here](https://expediensolutions.com/about-us.shtml)."
+      buttons:
+        - title: "Main Menu"
+          payload: 'main_menu'
+
+
+  utter_company_policy:
+    - text: "For Company Policy Please Visit [Here](http://hrms.expediensolutions.org:60001/Portal/PolicyPage.aspx)"
+      buttons:
+        - title: "Main Menu"
+          payload: 'main_menu'
+
+
+  utter_holiday_list:
+    - text: "Here is the PDF of Holiday Calendar 2024."
+      custom:
+        payload: pdf_attachment
+        title: "Holiday Calendar 2024"
+        url: "http://192.168.20.106:3000/static/files/Holiday%20Calendar%202024.pdf"
+      buttons:
+        - title: "Main Menu"
+          payload: 'main_menu' 
+
+
+  utter_leave:
+    - text: "Please Select"
+      buttons:
+        - title: "Leave Type"
+          payload: 'leave_type'
+        - title: "Leave Balance"
+          payload: 'leave_balance'
+        - title: "Apply Leave"
+          payload: 'apply_leave'
+        - title: "Main Menu"
+          payload: 'main_menu'
+
+
+  utter_leave_type:
+
+    - text: "You have the option to request the following leave types."
+      custom:
+        payload: "collapsible"
+        data:
+          - title: "Casual Leave"
+            description: "Unplanned short-term leave for personal or emergency reasons."
+          - title: "Privilege Leave"
+            description: "Planned time off with pay, accrued based on service."
+          - title: "Client Visit (OD)"
+            description: "Time off granted for visits to clients"
+          - title: "Leave Without Pay"
+            description: "Unpaid work leave without salary for personal reasons, subject to employer rules."
+          - title: "Donation Leaves"
+            description: "Leave earned through donations from colleagues."
+          - title: "Short Leave"
+            description: "Brief leave for a few hours or part of a day."
+          - title: "Maternity Leave"
+            description: "Time off for new mothers after childbirth, often with job protection and possible pay."
+      buttons:
+        - title: "Leave Balance"
+          payload: 'leave_balance'
+        - title: "Apply Leave"
+          payload: 'apply_leave'
+        - title: "Main Menu"
+          payload: 'main_menu'
+
+
+  utter_apply_leave:
+    - text: "You can apply for leave through HRMS portal. To apply for leave [Click Here](http://hrms.expediensolutions.org:60001/)"
+      buttons:
+        - title: "Main Menu"
+          payload: 'main_menu'
+
+
+  utter_provide_password:
+    - text: "Enter Your Password Please: "
+
+
+  utter_main_menu:
+    - text: "Thank you! For additional assistance, please choose an option from the menu below."
+      buttons:
+        - title: "About Expedien"
+          payload: 'about_expediens'
+        - title: "Company Policy"
+          payload: 'company_policy'
+        - title: "Leave"
+          payload: 'leave'
+        - title: "Holiday List"
+          payload: 'holiday_list'
+
+
+
+session_config:
+  session_expiration_time: 10
+  carry_over_slots_to_new_session: false

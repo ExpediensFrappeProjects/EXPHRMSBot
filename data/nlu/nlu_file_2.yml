@@ -1,0 +1,283 @@
+version: "3.1"
+
+nlu:
+
+- intent: about_expediens
+  examples: |
+    - Tell Me About Expedien eSolution Ltd.
+    - Expedien eSolution Ltd.
+    - Expediens
+    - EXP
+    - Learn about Expedien eSolution Ltd.
+    - Who is Expedien eSolution?
+    - Information on Expedien
+    - Brief me about Expediens
+    - What does EXP do?
+    - Expedien Overview
+    - About the company Expediens
+    - Tell me about EXP eSolution Ltd.
+    - Introduction to Expedien eSolution
+    - Get details on EXP
+    - What is Expedien eSolution known for?
+    - Expediens Company Profile
+    - EXP Background
+    - Explore Expedien eSolution
+    - Share details about Expedien eSolution
+    - Introduction to Expediens Company
+    - Learn more about EXP
+    - Expedien eSolution Information
+    - Brief overview of Expediens
+    - What can you tell me about Expediens eSolution Ltd.?
+    - Insights into Expedien
+    - Overview of EXP eSolution
+    - Tell me about the history of Expediens
+    - Who founded Expedien eSolution?
+    - Expediens in a nutshell
+    - Key facts about EXP
+    - What services does Expedien eSolution provide?
+    - Expedien eSolution Background
+    - Discovering EXP
+    - About EXP in brief
+
+
+- intent: company_policy
+  examples: |
+    - Company Policies
+    - Expedien Policy 
+    - Expedien eSolution Policy
+    - Employee Handbook
+    - Workplace Guidelines
+    - HR Policies
+    - Code of Conduct
+    - Corporate Rules
+    - Staff Regulations
+    - Organizational Policies
+    - Company Protocols
+    - Business Standards
+    - Operational Procedures
+    - Company Code
+    - Employment Policies
+    - Workplace Ethics
+    - Corporate Directives
+    - Company Guidelines
+    - Policies at Expedien
+    - Understanding Company Regulations
+    - Code of Behavior at Expedien
+    - Navigating HR Guidelines
+    - Learning about Expedien Standards
+    - Exploring Corporate Protocols
+    - Company Conduct Rules
+    - What are the Policies at Expedien?
+    - Accessing Employee Handbook
+    - Discovering Workplace Guidelines
+    - HR Code at Expedien
+    - Following Corporate Standards
+    - Staff Regulations at Expedien
+    - Knowing Organizational Policies
+
+
+- intent: holiday_list
+  examples: |
+    - /holiday_list
+    - Holiday
+    - Holiday List
+    - List of Holidays
+    - Company Holidays
+    - National Holidays
+    - Public Holidays
+    - Annual Leave Schedule
+    - Days Off
+    - 2023 Holiday Calendar
+    - Check Holidays for 2024
+    - Tell me about the Holiday List
+    - Get the PDF of Holiday List for 2024
+    - Any holidays this month?
+    - Show me the 2024 holiday schedule
+    - Can you provide a printable version of the Holiday List?
+    - What are the upcoming holidays?
+    - Inform me about the days off in the coming months
+    - List of official holidays
+    - Share the Holiday Calendar
+    - Provide details on the holidays in 2023
+    - How many holidays are there in 2024?
+    - Is there a downloadable version of the Holiday List?
+    - Any special observances this year?
+    - Clarify the public holidays for this year
+    - Show me the list of observed holidays
+    - PDF of the holiday schedule for next year
+    - Retrieve the Holiday List PDF for 2024
+    - Tell me about the upcoming days off
+
+
+- intent: leave
+  examples: |
+    - /leave
+    - leave
+    - leaves
+
+- intent: leave_type
+  examples: |
+    - /leave_type
+    - Leave Type
+    - Type of Leave Available
+    - Different Leave Categories
+    - What kinds of leave can I take?
+    - Explain leave options
+    - Casual Leave
+    - Privilege Leave
+    - Short Leave 
+    - Half Day Leave
+    - Maternity Leave
+    - Client Visit (OD) Leave
+    - Available time-off categories
+    - List of leave types
+    - Describe leave choices
+    - Tell me about the types of leave
+    - What are the different leave options?
+    - Clarify available time-off
+    - Provide information on leave types
+    - Types of time-off
+    - Breakdown of leave categories
+    - Enumerate leave choices
+    - Specify available leave
+    - Elaborate on leave options
+    - Breakdown of available time-off
+    - Help me understand leave types
+    - Inform me about types of leave
+    - What are my leave choices?
+    - Time-off categories explanation
+    - Enlighten me on leave types
+    - Breakdown of time-off options
+    - Clarification on leave categories
+    - Explain different leave types
+
+
+- intent: apply_leave
+  examples: |
+    - /apply_leave
+    - Apply Leave
+    - Leave Apply
+    - Apply Casual Leave
+    - Apply Privilege Leave
+    - I want to apply leave.
+    - Apply Short Leave 
+    - Apply Half Day Leave
+    - Apply Maternity Leave
+    - Apply Client Visit (OD) Leave
+    - Help me in applying leave
+    - Can you apply leave for me 
+    - Apply Privilege Leave
+    - Help me in applying leave
+    - I want to apply leave.
+    - Apply Short Leave 
+    - Apply Client Visit (OD) Leave
+    - Can you apply leave for me 
+    - Apply Maternity Leave
+    - Apply Casual Leave
+    - Apply Half Day Leave
+    - Apply leave for tomorrow
+    - Submit leave request
+    - Request for a day off
+    - Take a leave day
+    - Requesting time off
+    - Apply for vacation
+    - Initiate leave application
+    - Request casual leave
+
+
+- intent: leave_balance
+  examples: |
+    - /leave_balance
+    - Leave Balance
+    - My Remaining Leaves
+    - Show my leave balances
+    - Check how many leaves I have left
+    - What is my current leave balance?
+    - Display my remaining vacation days
+    - How many days off do I have?
+    - Tell me about my available leave days
+    - Inform me of my unused leave balance
+    - Get details on my leave entitlement
+    - Show the balance of my leaves
+    - What's my remaining annual leave?
+    - Provide information on my vacation days
+    - Display my accrued leave balance
+    - Can you tell me about my remaining time off?
+    - Check my available leave hours
+    - What's the status of my leave quota?
+    - Share my unused leave days
+    - Inform me about my remaining paid time off
+    - How many vacation days do I have left?
+    - Show my leave entitlement
+    - Display my current leave status
+    - Tell me about my remaining leave hours
+    - Share my available days off
+    - What's my remaining leave balance for the year?
+    - Provide details on my remaining leave quota
+
+
+- intent: provide_user_id
+  examples: |
+    - User ID: [EXP-201206](user_id)
+    - [EXP-349340](user_id)
+    - My User ID is [EXP-2402053](user_id)
+    - userid [EXP-2378012](user_id)
+    - my userid [EXP-123536](user_id)
+    - User ID: [EXP-907632](user_id)
+    - [EXP-456789](user_id)
+    - My ID is [EXP-789012](user_id)
+    - ID: [EXP-345678](user_id)
+    - [EXP-123456](user_id)
+    - Here's my ID: [EXP-987654](user_id)
+    - User [EXP-567890](user_id)
+    - ID [EXP-234567](user_id)
+    - [EXP-890123](user_id)
+    - My user ID: [EXP-678901](user_id)
+    - User ID: [EXP-111222](user_id)
+    - [EXP-333444](user_id)
+    - ID is [EXP-555666](user_id)
+    - userid: [EXP-777888](user_id)
+    - [EXP-999000](user_id)
+    - This is my ID: [EXP-123456](user_id)
+    - [EXP-789012](user_id) is my user ID
+    - Check [EXP-345678](user_id)
+    - My ID number is [EXP-098765](user_id)
+    - [EXP-543210](user_id) is my user ID
+
+
+- regex: password
+  examples: |
+    - \b(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}|:;<>,.?~/\\[\]-])(?!.*\s)[a-zA-Z\d!@#$%^&*()_+{}|:;<>,.?~/\\[\]-]{8,32}\b
+
+- intent: provide_password
+  examples: |
+    - Password: [Root@1234#](password)
+    - [Root@1234#$?](password)
+    - [qwerty1234$?](password)
+    - [Abhisgeh@1234?#](password)
+    - [Nimer@1234#$?](password)
+    - Here's my password: [EXPRoot@123$?](password)
+    - My password is [Admin1234](password)
+    - [Qwerty@2024](password)
+    - Pwd: [manish1245](password)
+    - Access Code: [SecurePwd!123](password)
+    - [BlueSky@2024](password)
+    - [qwerty12234](password)
+    - [exphrms@123](password)
+    - [exp239@12%](password)
+    - [rahurl@32123](password)
+    - [abhay18gaur](password)
+    - [manish@1234#](password)
+    - [123@sanjeet](password)
+    - [COMPANY$198](password)
+    - [Nimer@1313#](password)
+    - [Ahay_1903#](password)
+    - [exphrms@1234#](password)
+    - [SHASHI2023@](password)
+    - [qwerty1234$?](password)
+    - [qwerty](password)
+    - [exphrms](password)
+    - [pass123](password)
+    - [qweerty](password)
+    - [COMPANY$198](password)
+    - [ABHISHEK@1346&$](password)

@@ -1,0 +1,144 @@
+<!DOCTYPE html5>
+
+<html>
+  <head>
+    <title>Expediens Virtual Assistant</title>
+
+    <!--Let Browser Know Website is Optimized for Mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
+    <!--Add Favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="static/favicon/192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="static/favicon/512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="static/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="static/favicon/site.webmanifest" />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Import Font Awesome Icon Font-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/css/materialize.min.css"
+    />
+
+    <!--Main CSS-->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        Expedien eSolution Ltd.
+      </div>
+  
+      <!--Modal for Rendering the Charts-->
+      <div id="modal1" class="modal">
+        <canvas id="modal-chart"></canvas>
+      </div>
+
+      <!--Chatbot Widget -->
+      <div class="widget">
+        <div class="chat_header">
+
+          <!--Add the Name of the Bot-->
+          <span class="chat_header_title">Expediens Virtual Assistant</span>
+          <span class="dropdown-trigger" href="#" data-target="dropdown1">
+            <i class="material-icons"> more_vert </i>
+          </span>
+
+          <!-- Dropdown Menu-->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#" id="clear">Clear</a></li>
+            <li><a href="#" id="restart">Restart</a></li>
+            <li><a href="#" id="close">Close</a></li>
+          </ul>
+        </div>
+
+        <!--Chatbot Contents-->
+        <div class="chats" id="chats">
+          <div class="clearfix"></div>
+        </div>
+
+        <!--Keypad for User to Type the Message-->
+        <div class="keypad">
+          <textarea
+            id="userInput"
+            placeholder="Type Your Message Here........."
+            class="usrInput"
+          ></textarea>
+          <div id="sendButton">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <!--Bot Profile-->
+      <div class="profile_div" id="profile_div">
+        <img class="imgProfile" src="static/img/BotAvatar.png" />
+      </div>
+
+      <!--Bot Pop-Up Intro-->
+      <div class="tap-target" data-target="profile_div">
+        <div class="tap-target-content">
+          <h5 class="white-text">Hey! There 👋</h5>
+          <p class="white-text"> I'm Your Expediens Virtual Assistant.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--JavaScript at End of Body for Optimized Loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="static/js/lib/materialize.min.js"
+    ></script>
+    <script src="static/js/lib/uuid.min.js"></script>
+
+    <!--Main Script-->
+    <script type="text/javascript" src="static/js/script.js"></script>
+
+    <!--Chart Script-->
+    <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
+    <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+version: "3.1"
+
+nlu:
+
+
+- intent: bot_start_conversation
+  examples: |
+    - Start Conversation
+    - Greet User
+
+
+- intent: bot_restart_conversation
+  examples: |
+    - /restart
+    - restart
+
+
+- intent: main_menu
+  examples: |
+    - main menu
+    - home
+
+
+- intent: exit_conversation
+  examples: |
+    - exit
+    - end
+
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hii
+    - good morning
+    - morning
+    - good afternoon
+    - afternoon
+    - good evening
+    - evening
+    - good night
+    - night
+    - how are you
+    - hello there
+    - hey
+    - hey there
+    - hi, how's it going
+    - good day
+    - greetings
+    - what's up
+    - hi, what's new
+    - howdy
+    - hiya
+    - sup
+    - yo
+    - aloha
+    - hi!
+    - hey!
+    - good to see you
+    - hi, friend
+    - hey, how's it going
+    - hi, stranger
+    - hi, friend!
+    - hey, buddy
+    - hi, pal
+    - hey, there!
+    - hi, sunshine
+    - greetings!
+    - hi, how are you?
+    - hey, what's going on?
+    - hi, nice to meet you
+    - hey, nice to see you
+    - hi, it's me
+    - hey, it's been a while
+    - hi, long time no see
+    - greetings, earthling
+    - hi, what's the news
+    - hey, any updates?
+
+
+- intent: goodbye
+  examples: |
+    - bye
+    - see you soon
+    - nice meeting you
+    - goodbye
+    - farewell
+    - take care
+    - until next time
+    - adios
+    - catch you later
+    - goodbye for now
+    - see you around
+    - have a great day
+    - see you later
+    - see you next time
+    - it was a pleasure
+    - have a good one
+    - peace out
+    - see you tomorrow
+    - goodbye, friend
+    - bye-bye
+    - see you shortly
+    - farewell, my friend
+    - have a wonderful day
+    - until we meet again
+    - have a nice day
+    - goodbye, take care
+    - see you in a bit
+    - farewell, and be well
+    - until then
+    - have a fantastic time
+    - see you in the future
+    - it's been a pleasure
+    - so long
+    - until we meet once more
+    - goodbye, have a safe journey
+    - see you on the flip side
+    - it's time to say goodbye
+    - take it easy
+    - until our paths cross again
+    - farewell, and stay safe
+    - goodbye, it was nice talking to you
+
+
+- intent: bot_challange
+  examples: |
+    - are you a bot?
+    - prove you're real
+    - can you pass Turing test?
+    - human or machine?
+    - convince me you're human
+    - are you a robot?
+    - show you're not automated
+    - prove you're not a bot
+    - human or AI?
+    - show your authenticity
+    - convince me you're not code
+    - real person or not?
+    - pass as a human
+    - prove you're not automated
+    - human or machine?
+    - show emotions
+    - are you real?
+    - convince me you're not scripted
+    - human touch?
+    - pass as a human
+    - show emotions
+    - prove you're not just code
+    - mimic human conversation?
+    - are you a program?
+    - convince me you have a soul
+    - show empathy
+    - are you thinking being?
+    - prove cognitive abilities
+    - independent thought?
+    - convince me you're not scripted
+    - self-aware?
+    - show intellectual capacity
+    - conscious or not?
+    - prove not pre-programmed
+    - exhibit free will
+    - convince me you're not a machine
+    - are you conscious?
+    - prove you're not pre-programmed
+    - exhibit free will
+    - convince me you're not a machine
+    - are you conscious?
+    - show self-awareness
+    - can you think for yourself?
+    - demonstrate self-awareness
+    - can you think for yourself?
+    - demonstrate self-awareness
+    - are you scripted?
+    - prove you're not just code
+
+
+- intent: nlu_fallback
+  examples: |
+    - Hello, I want to book movie ticket.
+    - Who is owner of expediens esolution
+    - I want to resign
+    - Salary Credit Date
+    - When will salary be credited 
+    - DSFJGDSKJ
+    - askdhfsdkj
+    - Fuck You
+    - I love you
+    - Will you marry me
+    - You look sexy 
+    - Am I sexy 
+    - I will distroy expediens esolution
+    - Expediens is not a good comapny
+    - Expediesn is a good comapny
+    - expediens is very bad 
+    - List of employee
+    - Hello, can you help me with my order?
+    - How can I reach customer support?
+    - What's the weather like today?
+    - I need assistance with a technical issue.
+    - What is the meaning of life?
+    - Tell me a joke.
+    - Can you recommend a good restaurant nearby?
+    - I need information about your company's products.
+    - Who won the latest soccer game?
+    - What's the capital of France?
+    - Explain quantum physics to me.
+    - What is the square root of 144?
+    - Play some music for me.
+    - What's the latest fashion trend?
+    - Help me with my math homework.
+    - Who is the president of the United States?
+    - What's the recipe for chocolate cake?
+    - I need advice on a relationship problem.
+    - How do I change my password?
+    - What's the current exchange rate for dollars to euros?
+    - Recommend a good book to read.
+    - What are the top news headlines today?
+    - Can you sing a song for me?
+    - How do I tie a bowtie?
+    - Tell me a fun fact.
+    - What's the meaning of the word "serendipity"?
+    - Help me plan a vacation.
+    - What's the best way to stay healthy?
+    - Who is your favorite superhero?
+    - What's the largest mammal on Earth?
+    - What's the population of Tokyo?
+    - Explain the concept of artificial intelligence.
+    - What's the best way to learn a new language?
+    - Can you speak any other languages?
+    - Who is the CEO of Google?
+    - What's the distance to the nearest star?
+    - How do I make a perfect cup of coffee?
+    - Recommend a good workout routine.
+    - What's the speed of light?
+    - Who painted the Mona Lisa?
+    - What's the best movie of all time?
+    - How do I create a website?
+    - Can you solve a Rubik's Cube?
+    - What's the meaning of the word "ephemeral"?
+    - How do I grow a garden?
+    - Who wrote the play "Romeo and Juliet"?
+    - What's the most expensive painting ever sold?
+    - Recommend a good podcast to listen to.
+    - How do I meditate?
+    - What's the meaning of the acronym "NASA"?
+    - Can you draw a cat for me?
+    - Who is your favorite historical figure?
+    - What's the recipe for a classic margarita?
